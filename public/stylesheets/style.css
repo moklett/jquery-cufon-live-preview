@@ -1,0 +1,44 @@
+body {
+  text-align: center;
+}
+
+textarea {
+  font-size: 20px;
+}
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.preview {
+  margin: 3em 0;
+  border: 1px solid #ddd;
+}
+
+.clpwidget_toolbar {
+  background-color: #f0f0f0;
+  padding: 2px;
+}
+
+.clpwidget_toolbar button {
+  float: right;
+}
+
+.clpwidget_preview {
+  padding: 12px;
+  line-height: 1.5em;
+  overflow: hidden;
+}
+
+.clpwidget textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}

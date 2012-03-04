@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Cufón Live Preview DEMO</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <script src="../vendor/jquery-1.7.1.min.js"></script>
+  <script src="../vendor/cufon-yui.js"></script>
+  <script src="../jquery-cufon-live-preview.js"></script>
+  <script src="fonts/ChunkFive.font.js"></script>
+  <script src="fonts/Pacifico.font.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Cufón Live Preview DEMO</h1>
+    <div class="preview">
+      <textarea id="editor1">The five boxing wizards jump quickly.</textarea>
+    </div>
+    <div class="preview">
+      <textarea id="editor2">Waltz, bad nymph, for quick jigs vex!</textarea>
+    </div>
+    <script>
+      $('#editor1').cufonLivePreview({
+        fonts: [['ChunkFive (block)', 'ChunkFive'], ['Pacifico (script)', 'Pacifico']],
+        defaultFont: 'ChunkFive'
+      });
+      $('#editor2').cufonLivePreview({
+        defaultFont: 'Pacifico'
+      });
+    </script>
+    
+  </div>
+  <script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>
