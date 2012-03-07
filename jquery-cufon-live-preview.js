@@ -30,7 +30,6 @@ var CufonLivePreview = function($) {
       val = Widget.defaultContent;
       this.textarea.val(val)
     }
-    this.textarea.val();
     return val;
   }
 
