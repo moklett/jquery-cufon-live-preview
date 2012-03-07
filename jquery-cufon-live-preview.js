@@ -38,8 +38,8 @@ var CufonLivePreview = function($) {
     this.toolbar = $('<div class="clpwidget_toolbar"/>');
     this.toolbarFontSelector = $('<select class="clpwidget_font_select"/>');
     this.toolbarSizeSelector = $('<select class="clpwidget_font_size_select"/>');
-    this.toolbarEditButton = $('<button class="clpwidget_edit_button">Edit Text</button>');
-    this.toolbarSaveButton = $('<button class="clpwidget_save_button">Save Changes</button>').hide();
+    this.toolbarEditButton = $('<button class="clpwidget_edit_button">Change Text</button>');
+    this.toolbarUpdateButton = $('<button class="clpwidget_save_button">Update</button>').hide();
     this.previewPane = $('<div class="clpwidget_preview"/>').html(this.content());
     this.textarea.addClass('clpwidget_editor');
     
@@ -48,7 +48,7 @@ var CufonLivePreview = function($) {
         this.toolbarFontSelector.append(this.htmlFontSelectOptions()),
         this.toolbarSizeSelector.append(this.htmlFontSizeSelectOptions()),
         this.toolbarEditButton,
-        this.toolbarSaveButton
+        this.toolbarUpdateButton
       ),
       this.previewPane
     )
@@ -100,7 +100,7 @@ var CufonLivePreview = function($) {
     this.toolbarEditButton.click(function() {
       widget.edit();
     });
-    this.toolbarSaveButton.click(function() {
+    this.toolbarUpdateButton.click(function() {
       widget.update();
     });
   }
@@ -133,14 +133,14 @@ var CufonLivePreview = function($) {
     this.textarea.show();
     this.textarea.height(Math.max(50, this.previewPane.height()));
     this.toolbarEditButton.hide();
-    this.toolbarSaveButton.show();
+    this.toolbarUpdateButton.show();
   }
 
   Widget.prototype.update = function() {
     this.previewPane.show();
     this.textarea.hide();
     this.toolbarEditButton.show();
-    this.toolbarSaveButton.hide();
+    this.toolbarUpdateButton.hide();
     this.previewPane.html(this.content());
     this.preview();
   }
