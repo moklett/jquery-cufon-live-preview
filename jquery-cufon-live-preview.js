@@ -88,7 +88,7 @@ var CufonLivePreview = function($) {
     this.textarea.before(this.root);
     this.root.append(this.textarea);
     this.textarea.hide();
-    if (this.settings.hideEditButton) {
+    if (this.settings.hideEditButton === true) {
       this.toolbarEditButton.hide();
     }
     this.toolbarFontSelector.val(this.computeDefaultFont());
@@ -146,10 +146,9 @@ var CufonLivePreview = function($) {
   Widget.prototype.update = function() {
     this.previewPane.show();
     this.textarea.hide();
-    if (!this.settings.hideEditButton) {
+    if (this.settings.hideEditButton != true) {
       this.toolbarEditButton.show();
     }
-    this.toolbarEditButton.show();
     this.toolbarUpdateButton.hide();
     this.previewPane.html(this.content());
     this.preview();
