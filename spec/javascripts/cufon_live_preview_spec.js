@@ -26,6 +26,10 @@ describe("cufonLivePreview plugin", function() {
       expect($('button.clpwidget_save_button')).toBeHidden();
     });
     
+    it("keeps the edit button visible", function() {
+      expect($('button.clpwidget_edit_button')).not.toBeHidden();
+    });
+    
     it("adds a preview pane to the widget", function() {
       var widget = $('div.clpwidget');
       expect(widget).toContain('div.clpwidget_preview');
@@ -189,6 +193,20 @@ describe("cufonLivePreview plugin", function() {
       });
 
       expect($('.clpwidget_font_size_select option:selected').val()).toEqual('3');
+    });
+    
+    it("shows the edit button when hideEditButton=false", function() {
+      $('textarea#target').cufonLivePreview({
+        hideEditButton: false
+      });
+      expect($('button.clpwidget_edit_button')).not.toBeHidden();
+    });
+
+    it("hides the edit button when hideEditButton=true", function() {
+      $('textarea#target').cufonLivePreview({
+        hideEditButton: true
+      });
+      expect($('button.clpwidget_edit_button')).toBeHidden();
     });
   });
 });

@@ -8,7 +8,8 @@ var CufonLivePreview = function($) {
       fonts: CufonLivePreview.fontRegistry,
       fontSizes: ['12', '14', '18', '24', '30', '36', '48', '60', '72'],
       defaultFontSize: null,
-      defaultFont: null
+      defaultFont: null,
+      hideEditButton: false
     }, settings);
     Widget.addWidget(this);
     this.generateHTML();
@@ -87,6 +88,9 @@ var CufonLivePreview = function($) {
     this.textarea.before(this.root);
     this.root.append(this.textarea);
     this.textarea.hide();
+    if (this.settings.hideEditButton) {
+      this.toolbarEditButton.hide();
+    }
     this.toolbarFontSelector.val(this.computeDefaultFont());
     this.toolbarSizeSelector.val(this.computeDefaultFontSize());
     this.preview();
@@ -142,6 +146,9 @@ var CufonLivePreview = function($) {
   Widget.prototype.update = function() {
     this.previewPane.show();
     this.textarea.hide();
+    if (!this.settings.hideEditButton) {
+      this.toolbarEditButton.show();
+    }
     this.toolbarEditButton.show();
     this.toolbarUpdateButton.hide();
     this.previewPane.html(this.content());
