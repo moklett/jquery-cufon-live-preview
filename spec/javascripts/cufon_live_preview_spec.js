@@ -76,6 +76,18 @@ describe("cufonLivePreview plugin", function() {
     it("selects an initial 30px font size", function() {
       expect($('.clpwidget_font_size_select').val()).toEqual('30');
     });
+    
+    it("displays the editor when clicking on the 'Change text' button", function() {
+      expect($('.clpwidget_editor')).toBeHidden();
+      $('.clpwidget_edit_button').click();
+      expect($('.clpwidget_editor')).not.toBeHidden();
+    });
+
+    it("displays the editor when clicking on the preview", function() {
+      expect($('.clpwidget_editor')).toBeHidden();
+      $('.clpwidget_preview').click();
+      expect($('.clpwidget_editor')).not.toBeHidden();
+    });
   });
 
   describe("invoked on two texareas", function() {

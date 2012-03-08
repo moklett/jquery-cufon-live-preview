@@ -97,6 +97,9 @@ var CufonLivePreview = function($) {
     this.toolbarFontSelector.change(function() {
       widget.preview();
     });
+    this.previewPane.click(function() {
+      widget.edit();
+    });
     this.toolbarEditButton.click(function() {
       widget.edit();
     });
