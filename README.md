@@ -2,7 +2,7 @@
 
 This jQuery plugin can transform the text in any basic HTML `<textarea>` in to a live preview of any OTF or TTF font which you have converted to  [cufón](http://cufon.shoqolate.com/generate/) format.
 
-What do I mean by "live preview"?  Your users can enter their text, and then view that text in a font and size they select.
+What do I mean by "live preview"?  Your users can enter their own text, and then view that text in a font and size they select, without any server-side processing.
 
 ## Usage
 
