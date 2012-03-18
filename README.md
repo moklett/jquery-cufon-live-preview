@@ -29,7 +29,7 @@ What do I mean by "live preview"?  Your users can enter their own text, and then
     
 ### Registering Fonts
 
-The plugin provides a callback function, `CufonLivePreview.registerFont` which can be provided as the function to receive the font data for the Cufón font generator.  This callback function will call the usual `Cufon.registerFont` after adding the font to the local font registry.  This allows us to know what fonts have been loaded, and display all fonts by default if you don't provide an explicit setting for `fonts`.  Note: As far as I can tell, Cufón does not provide a programmatic way of accessing the registered fonts - if it ever does then registration via `CufonLivePreview.registerFont` won't be necessary.
+The plugin provides a callback function, `CufonLivePreview.registerFont` which can be provided as the function to receive the font data for the [Cufón font generator](http://cufon.shoqolate.com/generate/).  This callback function will call the usual `Cufon.registerFont` after adding the font to the local font registry.  This allows us to know what fonts have been loaded, and display all fonts by default if you don't provide an explicit setting for `fonts`.  Note: As far as I can tell, Cufón does not provide a programmatic way of accessing the registered fonts - if it ever does then registration via `CufonLivePreview.registerFont` won't be necessary.
 
 ## Example
 
